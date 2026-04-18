@@ -1,6 +1,6 @@
 1) created task_001_create_todo_app.md
-2) prompt: analyse the implementation task in @/task_001_create_todo_app.md and improve for later implementation.
-   Write the result in  @/@/task_001_create_todo_app_improved.md
+2) prompt: analyse the implementation task in @/02_implementation/task_001_create_todo_app.md and improve for later implementation.
+   Write the result in  @/02_implementation/task_001_create_todo_app_improved.md
 
 
 Analyze the current implementation task document structure and identify gaps

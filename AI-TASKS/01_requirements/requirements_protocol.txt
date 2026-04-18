@@ -1,6 +1,6 @@
-1) created /requirements/todo-app.req.md
-2) prompt: analyse the requirements in @/requirements/todo-app-req.md and improve for later implementation.
-   Write the result in  @/requirements/todo-app-req-improved.md
+1) created /01_requirements/todo-app.req.md
+2) prompt: analyse the requirements in @/01_requirements/todo-app-req.md and improve for later implementation.
+   Write the result in  @/01_requirements/todo-app-req-improved.md
 
    Now let me create a todo list for analyzing and improving the requirements document.
 
