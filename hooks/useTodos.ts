@@ -1,6 +1,6 @@
 // Custom hook for managing todos
 
-'use client';
+//'use client';
 
 import { useState, useEffect, useCallback } from 'react';
 import { Todo, TodoState, TodoResponse } from '@/types/todo';

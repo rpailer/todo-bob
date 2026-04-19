@@ -1,6 +1,6 @@
 // TodoInput component for creating new todos
 
-'use client';
+//'use client';
 
 import React, { useState } from 'react';
 import Input from './ui/Input';

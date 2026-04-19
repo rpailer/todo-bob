@@ -1,6 +1,6 @@
 // TodoItem component for displaying individual todo
 
-'use client';
+//'use client';
 
 import React from 'react';
 import { Todo, TodoState } from '@/types/todo';
