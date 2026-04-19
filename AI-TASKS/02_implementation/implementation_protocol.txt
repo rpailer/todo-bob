@@ -73,3 +73,79 @@ Cache
 ↓ 88.7k
 API Cost	0.24
 Size	116 kB
+
+3) Implement the task described in @AI-TASKS/02_implementation/task_001_create_todo_app_improved.md
+
+ Backend (API Routes):
+
+GET/POST /api/todos - List and create todos
+GET/PUT/DELETE /api/todos/[id] - Individual todo operations
+IBM Cloudant database integration via lib/cloudant.ts
+Zod validation schemas in lib/validation.ts
+Frontend (React Components):
+
+Main page at app/page.tsx with clean, responsive UI
+Reusable UI components: Button, Input, Checkbox
+Todo components: TodoInput, TodoItem, TodoList
+Custom useTodos hook with optimistic updates
+Features:
+
+Create, read, update, delete todos
+Toggle completion status
+Input validation (1-500 characters)
+Responsive design with Tailwind CSS
+Loading and error states
+Persistent storage in Cloudant DB
+Tech Stack:
+
+Next.js 16 with App Router
+TypeScript with strict mode
+Tailwind CSS v4
+IBM Cloudant NoSQL database
+Zod for validation
+Development server running at http://localhost:3000
+
+Context Length	
+89.8k
+1
+
+Task Id	
+cf27ed77-46a0-4599-94cd-d92f02376849
+Tokens	
+↑ 2.7m
+↓ 13.7k
+Cache	
+↑ 74.3k
+↓ 2.6m
+API Cost	1.25
+Size	639 kB
+
+Setp 4) when running the app with 'npm run dev', the systems runs out of memory. 
+It seems that the application executes an endless loop and consumes all memory.
+Analyse and fix the code wothout starting it.
+
+Fixed the infinite loop causing memory exhaustion. The issue was in [`hooks/useTodos.ts`](hooks/useTodos.ts:126-129) where the `useEffect` had `fetchTodos` in its dependency array, causing it to re-run continuously.
+
+**Root cause:** The `useEffect` was triggering on every render because `fetchTodos` was being recreated, even though it had an empty dependency array in its `useCallback`.
+
+**Solution:** Changed the `useEffect` dependency array from `[fetchTodos]` to `[]` to ensure it only runs once on mount, preventing the infinite loop.
+
+The app should now run normally with `npm run dev` without memory issues.
+
+Context Length	
+23.2k of 200.0k
+
+Task Id	
+dd0d834e-74e5-4d2a-a639-310a2980c154
+Tokens	
+↑ 60.9k
+↓ 790
+Cache	
+↑ 23.0k
+↓ 37.9k
+API Cost	0.11
+Size	160 kB
+
+Step 5) The infinte loop problem is still there. Analyse the code more closely and try to fix the problem.
+Include console.log statements at strategic points in the code, to debug the problem.
+
